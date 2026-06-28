@@ -814,6 +814,15 @@ function Layout() {
   );
 }
 
+// Helper to prefix local image URLs with Vite's BASE_URL for GitHub Pages support
+const formatImageUrl = (url) => {
+  if (!url) return '';
+  if (url.startsWith('/')) {
+    return `${import.meta.env.BASE_URL}${url.slice(1)}`;
+  }
+  return url;
+};
+
 // 1. HOME VIEW
 function HomeView() {
   const navigate = useNavigate();
@@ -824,7 +833,7 @@ function HomeView() {
       <section 
         className="relative overflow-hidden border-b border-slate-900 py-20 lg:py-32 bg-slate-950 text-white"
         style={{
-          backgroundImage: 'url("/images/hero_showcase.jpg")',
+          backgroundImage: `url("${import.meta.env.BASE_URL}images/hero_showcase.jpg")`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -992,7 +1001,7 @@ function CatalogView() {
       {/* Top Header Banner */}
       <div 
         className="relative h-64 bg-cover bg-center flex items-center" 
-        style={{ backgroundImage: 'url("/images/catalog_banner.jpg")' }}
+        style={{ backgroundImage: `url("${import.meta.env.BASE_URL}images/catalog_banner.jpg")` }}
       >
         <div className="absolute inset-0 bg-slate-950/75"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -1144,7 +1153,7 @@ function CatalogView() {
                 >
                   <div className="h-44 bg-slate-100 relative overflow-hidden flex items-center justify-center">
                     <img 
-                      src={product.imageUrl} 
+                      src={formatImageUrl(product.imageUrl)} 
                       alt={product.name} 
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       loading="lazy"
@@ -1206,7 +1215,7 @@ function AboutView() {
       {/* Top Header Banner */}
       <div 
         className="relative h-64 bg-cover bg-center flex items-center" 
-        style={{ backgroundImage: 'url("/images/about_banner.jpg")' }}
+        style={{ backgroundImage: `url("${import.meta.env.BASE_URL}images/about_banner.jpg")` }}
       >
         <div className="absolute inset-0 bg-slate-950/75"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -1326,7 +1335,7 @@ function ContactView() {
       {/* Top Header Banner */}
       <div 
         className="relative h-64 bg-cover bg-center flex items-center" 
-        style={{ backgroundImage: 'url("/images/contact_banner.jpg")' }}
+        style={{ backgroundImage: `url("${import.meta.env.BASE_URL}images/contact_banner.jpg")` }}
       >
         <div className="absolute inset-0 bg-slate-950/75"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -1575,20 +1584,20 @@ function ProductDetailView() {
           {/* Thumbnails strip */}
           <div className="flex sm:flex-col gap-2 shrink-0">
             <div className="w-12 h-12 rounded border-2 border-brand-red overflow-hidden p-0.5 bg-white cursor-pointer shadow-sm">
-              <img src={product.imageUrl} alt="Thumbnail 1" className="w-full h-full object-contain" />
+              <img src={formatImageUrl(product.imageUrl)} alt="Thumbnail 1" className="w-full h-full object-contain" />
             </div>
             <div className="w-12 h-12 rounded border border-slate-200 overflow-hidden p-0.5 bg-white opacity-40 cursor-not-allowed shadow-sm">
-              <img src={product.imageUrl} alt="Thumbnail 2" className="w-full h-full object-contain" />
+              <img src={formatImageUrl(product.imageUrl)} alt="Thumbnail 2" className="w-full h-full object-contain" />
             </div>
             <div className="w-12 h-12 rounded border border-slate-200 overflow-hidden p-0.5 bg-white opacity-40 cursor-not-allowed shadow-sm">
-              <img src={product.imageUrl} alt="Thumbnail 3" className="w-full h-full object-contain" />
+              <img src={formatImageUrl(product.imageUrl)} alt="Thumbnail 3" className="w-full h-full object-contain" />
             </div>
           </div>
           
           {/* Main big image view */}
           <div className="flex-grow w-full bg-slate-50 rounded border border-slate-200 p-6 flex items-center justify-center min-h-[300px]">
             <img 
-              src={product.imageUrl} 
+              src={formatImageUrl(product.imageUrl)} 
               alt={product.name} 
               className="max-h-[300px] object-contain" 
             />
