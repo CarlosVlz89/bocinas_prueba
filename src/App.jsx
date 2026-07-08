@@ -35,20 +35,20 @@ import {
 } from 'lucide-react';
 
 // Shared variables for easy modification
-const BRAND_NAME = "AURA AUDIO-LED";
-const LEGAL_NAME = "Aura Tecnología y Sonido Profesional S.A. de C.V.";
-const ADDRESS = "Av. Insurgentes Sur 1602, Crédito Constructor, Benito Juárez, CP 03940, Ciudad de México, CDMX";
-const SUPPORT_EMAIL = "soporte@aura-audioled.com.mx";
+const BRAND_NAME = "LEDS Y BOCINAS MADRIGAL";
+const LEGAL_NAME = "LEDS Y BOCINAS MADRIGAL";
+const ADDRESS = "Av. Convento Santa Mónica, Edificio 79, Piso 2, Interior 30 1-A, Col. Jardines de Santa Mónica, C.P. 54050, Tlalnepantla de Baz, Estado de México, México";
+const SUPPORT_EMAIL = "soporte@ledsybocinasmadrigal.com.mx";
 
 const SITE_DATA = {
   brandName: BRAND_NAME,
   legalName: LEGAL_NAME,
   phone: "+52 55 1234 5678",
   phoneFormatted: "+52 (55) 1234-5678",
-  email: "ventas@aura-audioled.com.mx",
+  email: "ventas@ledsybocinasmadrigal.com.mx",
   supportEmail: SUPPORT_EMAIL,
   address: ADDRESS,
-  googleMapsUrl: "https://maps.google.com/?q=Av.+Insurgentes+Sur+1602,+Crédito+Constructor,+Benito+Juárez,+03940+Ciudad+de+México",
+  googleMapsUrl: "https://maps.google.com/?q=Av.+Convento+Santa+Mónica,+Edificio+79,+Jardines+de+Santa+Mónica,+54050+Tlalnepantla+de+Baz",
   navigation: [
     { label: "Inicio", href: "/" },
     { label: "Catálogo", href: "/productos" },
@@ -57,18 +57,11 @@ const SITE_DATA = {
   ],
   brands: [
     {
-      id: "aurapro",
-      name: "AURA PRO",
+      id: "madrigalpro",
+      name: "MADRIGAL PRO",
       logoColor: "#e31b23",
-      logoText: "Aura Pro",
-      description: "AURA PRO es nuestra línea de gama alta dirigida a audiófilos y profesionales del sonido. Sus soluciones abarcan bocinas line-array de alta potencia, luces LED de alta densidad DMX y audífonos de monitoreo de estudio con respuesta de frecuencia plana y altos estándares de seguridad eléctrica."
-    },
-    {
-      id: "linkbits",
-      name: "LINKBITS",
-      logoColor: "#ef4444",
-      logoText: "linkbits",
-      description: "Link Bits se especializa en ofrecer soluciones tecnológicas accesibles y funcionales para el día a día. Destaca por su amplia gama de bocinas portátiles recargables con iluminación LED y audífonos inalámbricos de emparejamiento rápido para usuarios dinámicos."
+      logoText: "Madrigal Pro",
+      description: "MADRIGAL PRO es nuestra línea de gama alta dirigida a audiófilos y profesionales del sonido. Sus soluciones abarcan bocinas line-array de alta potencia, luces LED de alta densidad DMX y audífonos de monitoreo de estudio con respuesta de frecuencia plana y altos estándares de seguridad eléctrica."
     },
     {
       id: "tianlai",
@@ -94,8 +87,8 @@ const SITE_DATA = {
   ],
       products: [
     {
-      id: "aurapro-linearray",
-      brand: "aurapro",
+      id: "madrigalpro-linearray",
+      brand: "madrigalpro",
       name: "Altavoz Line Array Concert-12",
       category: "bocina",
       type: "speaker",
@@ -110,8 +103,8 @@ const SITE_DATA = {
       ]
     },
     {
-      id: "aurapro-headphone",
-      brand: "aurapro",
+      id: "madrigalpro-headphone",
+      brand: "madrigalpro",
       name: "Audífonos de Estudio Studio-Max",
       category: "audifonos",
       type: "speaker",
@@ -126,8 +119,8 @@ const SITE_DATA = {
       ]
     },
     {
-      id: "aurapro-led",
-      brand: "aurapro",
+      id: "madrigalpro-led",
+      brand: "madrigalpro",
       name: "Reflector Pro DMX 200W COB",
       category: "luces-led",
       type: "led-strip",
@@ -139,102 +132,6 @@ const SITE_DATA = {
         "Control: DMX512, audiorítmico y automático",
         "Grado de protección: IP65 para intemperie",
         "Ángulo de haz: 60 grados de cobertura"
-      ]
-    },
-    {
-      id: "linkbits-2358",
-      brand: "linkbits",
-      name: "Amplificador de Voz Portátil LB-2358",
-      category: "bocina",
-      type: "speaker",
-      imageUrl: "https://megaluz.mx/upload/import/product/20251115/003401.png",
-      shortDesc: "Megáfono y amplificador de voz portátil con micrófono de diadema y correa ajustable.",
-      price: "Cotizar precio",
-      specs: [
-        "Función: Amplificador de voz de alta definición para oradores y maestros",
-        "Accesorios: Incluye diadema con micrófono cableado y correa de sujeción",
-        "Alimentación: Batería recargable vía puerto USB integrado",
-        "Conectividad: Lector de tarjetas MicroSD y entrada auxiliar"
-      ]
-    },
-    {
-      id: "linkbits-2363",
-      brand: "linkbits",
-      name: "Altavoz Inalámbrico Portátil Party-12",
-      category: "bocina",
-      type: "speaker",
-      imageUrl: "https://megaluz.mx/upload/import/product/20251115/003278.png",
-      shortDesc: "Bafle portátil inalámbrico de 12 pulgadas con batería recargable y micrófono cableado.",
-      price: "Cotizar precio",
-      specs: [
-        "Diámetro: Woofer de 12 pulgadas con suspensión de alto rendimiento",
-        "Conectividad: Bluetooth 5.0, reproductor MP3 USB/SD y TWS",
-        "Accesorios: Control remoto multifuncional y micrófono alámbrico para karaoke",
-        "Iluminación: Efectos de luz LED RGB audiorítmicos integrados"
-      ]
-    },
-    {
-      id: "linkbits-2364",
-      brand: "linkbits",
-      name: "Bafle Portátil Recargable Sound-12",
-      category: "bocina",
-      type: "speaker",
-      imageUrl: "https://megaluz.mx/upload/import/product/20251115/003323.png",
-      shortDesc: "Altavoz inalámbrico portátil de 12 pulgadas con graves profundos y sistema TWS.",
-      price: "Cotizar precio",
-      specs: [
-        "Potencia acústica: Amplificador de alta fidelidad clase D",
-        "Batería: Autonomía de hasta 6 horas a volumen moderado",
-        "Soporte: Entrada de tripié estándar en la base",
-        "Funciones: Radio FM, control de eco y ecualizador manual"
-      ]
-    },
-    {
-      id: "linkbits-2365",
-      brand: "linkbits",
-      name: "Bafle Activo Recargable Concert-12",
-      category: "bocina",
-      type: "speaker",
-      imageUrl: "https://megaluz.mx/upload/import/product/20251115/003555.png",
-      shortDesc: "Altavoz inalámbrico portátil de 12 pulgadas con panel frontal LED inteligente.",
-      price: "Cotizar precio",
-      specs: [
-        "Potencia: Diseñado para eventos medianos e interiores",
-        "Iluminación: Panel frontal completo con efectos rítmicos LED",
-        "Conectividad: Emparejamiento doble TWS y reproducción directa USB",
-        "Diseño: Asa telescópica y ruedas para un transporte cómodo"
-      ]
-    },
-    {
-      id: "linkbits-earbuds",
-      brand: "linkbits",
-      name: "Audífonos In-Ear Pop-Buds Wireless",
-      category: "audifonos",
-      type: "microphone",
-      imageUrl: "/images/audifonos_earbuds.jpg",
-      shortDesc: "Audífonos inalámbricos TWS con estuche de carga inteligente",
-      price: "Cotizar precio",
-      specs: [
-        "Conectividad: Bluetooth 5.3 de ultra bajo retraso",
-        "Batería total: Hasta 24 horas con estuche",
-        "Protección: IPX4 resistente a salpicaduras",
-        "Control táctil inteligente en audífonos"
-      ]
-    },
-    {
-      id: "linkbits-led",
-      brand: "linkbits",
-      name: "Foco LED RGB Inteligente Bluetooth",
-      category: "luces-led",
-      type: "led-strip",
-      imageUrl: "/images/foco_inteligente.jpg",
-      shortDesc: "Bombilla LED multicolor con altavoz bluetooth integrado",
-      price: "Cotizar precio",
-      specs: [
-        "Rosca estándar E27 para hogar",
-        "Potencia lumínica: 9W RGB+W",
-        "Control mediante App y control remoto",
-        "Efectos dinámicos audiorítmicos"
       ]
     },
     {
@@ -489,12 +386,12 @@ const SITE_DATA = {
     },
     terms: {
       title: "Términos y Condiciones de Uso y Venta",
-      content: `El presente contrato regula los términos y condiciones de uso del sitio web y los términos comerciales aplicables a la cotización y adquisición de equipos de audio y sistemas de iluminación provistos por AURA AUDIO-LED.
+      content: `El presente contrato regula los términos y condiciones de uso del sitio web y los términos comerciales aplicables a la cotización y adquisición de equipos de audio y sistemas de iluminación provistos por ${BRAND_NAME}.
 
       1. Cotizaciones: Todas las cotizaciones emitidas a través de nuestro sitio web o por correo oficial tienen una vigencia de 15 días naturales y están sugeras a disponibilidad de stock.
       2. Garantías: Todos nuestros productos cuentan con una garantía limitada de 1 año contra defectos de fabricación. La garantía no cubre daños causados por variaciones de voltaje, negligencia de instalación o uso inapropiado.
       3. Envíos y Entregas: Realizamos entregas seguras en toda la República Mexicana. Los costos de envío son calculados en la cotización formal de acuerdo al volumen y peso de los equipos.
-      4. Métodos de Pago: Aceptamos transferencias bancarias SPEI, tarjetas de crédito/débito en terminales autorizadas y depósitos validados. Todos los precios están en Moneda Nacional (MXN).
+      4. Métodos de Pago: Aceptamos transferencias bancarias SPEI, tarjetas de crédito/debito en terminales autorizadas y depósitos validados. Todos los precios están en Moneda Nacional (MXN).
       5. Ley Aplicable: Para la resolución de cualquier controversia legal, las partes se someten a la jurisdicción de los tribunales competentes de la Ciudad de México, renunciando a cualquier otro fuero que pudiera corresponderles.`
     }
   }
@@ -648,11 +545,11 @@ function Layout() {
               </svg>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-black tracking-wider text-slate-900 font-display">
-                AURA
+              <span className="text-xl font-black tracking-wider text-slate-900 font-display leading-tight">
+                MADRIGAL
               </span>
-              <span className="text-[9px] font-black tracking-widest text-[#e31b23] -mt-1">
-                AUDIO-LED
+              <span className="text-[9px] font-black tracking-widest text-[#e31b23] -mt-1 block">
+                LEDS Y BOCINAS
               </span>
             </div>
           </Link>
@@ -750,7 +647,7 @@ function Layout() {
                   <circle cx="22" cy="45" r="5.5" fill="#f97316" />
                   <circle cx="32" cy="28" r="5.5" fill="#ef4444" />
                 </svg>
-                <span className="text-base font-black text-white tracking-wider font-display">AURA AUDIO-LED</span>
+                <span className="text-base font-black text-white tracking-wider font-display uppercase">{SITE_DATA.brandName}</span>
               </div>
               <p className="text-[11px] text-slate-500 max-w-xs leading-relaxed text-justify">
                 Grupo comercial importador de sistemas de audio, iluminación inteligente, pantallas LED y soportes de televisión. Abasto garantizado para constructoras y comercios en todo el país.
@@ -764,11 +661,10 @@ function Layout() {
             <div className="space-y-3">
               <h4 className="text-xs font-bold text-white uppercase tracking-wider">Marcas</h4>
               <ul className="space-y-1.5 text-xs">
-                <li><Link to="/productos" className="hover:text-brand-red transition-all">LINK BITS</Link></li>
+                <li><Link to="/productos" className="hover:text-brand-red transition-all">MADRIGAL PRO</Link></li>
                 <li><Link to="/productos" className="hover:text-brand-red transition-all">TIANLAI</Link></li>
                 <li><Link to="/productos" className="hover:text-brand-red transition-all">MEGALUZ CONCERT</Link></li>
                 <li><Link to="/productos" className="hover:text-brand-red transition-all">GONEO</Link></li>
-                <li><Link to="/productos" className="hover:text-brand-red transition-all">AURA PRO</Link></li>
               </ul>
             </div>
 
@@ -851,7 +747,7 @@ function HomeView() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none font-display">
               <span className="block text-slate-400 text-xl sm:text-2xl font-semibold tracking-normal mb-2 uppercase">
-                AURA AUDIO-LED
+                {SITE_DATA.brandName}
               </span>
               PURE SOUND.<br />
               <span className="bg-gradient-to-r from-red-500 via-orange-500 to-[#e31b23] bg-clip-text text-transparent">
@@ -957,7 +853,7 @@ function CatalogView() {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryParam = searchParams.get("categoria") || "all";
 
-  const [activeBrand, setActiveBrand] = useState("linkbits");
+  const [activeBrand, setActiveBrand] = useState("madrigalpro");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(categoryParam);
   const navigate = useNavigate();
@@ -982,7 +878,7 @@ function CatalogView() {
     }
   }, [categoryParam, activeBrand]);
 
-  const currentBrandData = SITE_DATA.brands.find(b => b.id === activeBrand) || SITE_DATA.brands[1];
+  const currentBrandData = SITE_DATA.brands.find(b => b.id === activeBrand) || SITE_DATA.brands[0];
 
   const filteredProducts = SITE_DATA.products.filter(product => {
     const matchBrand = product.brand === activeBrand;
@@ -1244,7 +1140,7 @@ function AboutView() {
             <Award className="w-8 h-8 text-brand-red" /> Nosotros e Infraestructura
           </h2>
           <p className="text-xs md:text-sm text-slate-500 leading-relaxed text-justify">
-            AURA AUDIO-LED (bajo la razón social *{SITE_DATA.legalName}*) es un corporativo de capital mexicano encargado de la importación directa y distribución mayorista de soluciones tecnológicas de sonido profesional e iluminación inteligente. Proveemos un canal transparente y seguro para constructoras, contratistas del gobierno y distribuidores minoristas en el territorio nacional.
+            {SITE_DATA.brandName} (bajo la razón social *{SITE_DATA.legalName}*) es un corporativo de capital mexicano encargado de la importación directa y distribución mayorista de soluciones tecnológicas de sonido profesional e iluminación inteligente. Proveemos un canal transparente y seguro para constructoras, contratistas del gobierno y distribuidores minoristas en el territorio nacional.
           </p>
         </div>
 
@@ -1266,7 +1162,7 @@ function AboutView() {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-slate-950 uppercase">Validación Fiscal y de Activos</h3>
             <p className="text-xs text-slate-500 leading-relaxed text-justify">
-              Entendemos los requerimientos de las instituciones financieras y auditorías administrativas. Por ello, AURA proporciona de manera transparente toda la documentación corporativa de soporte a nuestros clientes: constancia de situación fiscal del SAT, opinión de cumplimiento positiva en sentido fiscal, cuentas de banco validadas de la persona moral, e identificaciones aduanales de procedencia de equipos.
+              Entendemos los requerimientos de las instituciones financieras y auditorías administrativas. Por ello, {SITE_DATA.brandName} proporciona de manera transparente toda la documentación corporativa de soporte a nuestros clientes: constancia de situación fiscal del SAT, opinión de cumplimiento positiva en sentido fiscal, cuentas de banco validadas de la persona moral, e identificaciones aduanales de procedencia de equipos.
             </p>
           </div>
           <div className="space-y-4 bg-slate-50 p-6 rounded border border-slate-200 text-xs text-slate-500">
@@ -1298,7 +1194,7 @@ function ContactView() {
     company: '',
     productInterest: initialProduct,
     message: initialProduct 
-      ? `Hola Aura Audio-LED, me interesa solicitar una cotización e información sobre el producto: ${initialProduct}. Quedo a la espera de su contacto.`
+      ? `Hola ${SITE_DATA.brandName}, me interesa solicitar una cotización e información sobre el producto: ${initialProduct}. Quedo a la espera de su contacto.`
       : ''
   });
   
@@ -1309,7 +1205,7 @@ function ContactView() {
       setFormData(prev => ({
         ...prev,
         productInterest: initialProduct,
-        message: `Hola Aura Audio-LED, me interesa solicitar una cotización e información sobre el producto: ${initialProduct}. Quedo a la espera de su contacto.`
+        message: `Hola ${SITE_DATA.brandName}, me interesa solicitar una cotización e información sobre el producto: ${initialProduct}. Quedo a la espera de su contacto.`
       }));
     }
   }, [initialProduct]);
@@ -1430,7 +1326,7 @@ function ContactView() {
               </div>
               <h4 className="text-base font-bold text-slate-800 mb-1">¡Mensaje Enviado Correctamente!</h4>
               <p className="text-xs text-slate-400 max-w-xs mx-auto leading-relaxed">
-                Su solicitud ha sido registrada en el sistema de distribución de Aura Audio-LED. Un asesor comercial se pondrá en contacto con usted a la brevedad.
+                Su solicitud ha sido registrada en el sistema de distribución de {SITE_DATA.brandName}. Un asesor comercial se pondrá en contacto con usted a la brevedad.
               </p>
             </div>
           ) : (
