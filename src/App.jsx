@@ -661,10 +661,10 @@ function Layout() {
             <div className="space-y-3">
               <h4 className="text-xs font-bold text-white uppercase tracking-wider">Marcas</h4>
               <ul className="space-y-1.5 text-xs">
-                <li><Link to="/productos" className="hover:text-brand-red transition-all">MADRIGAL PRO</Link></li>
-                <li><Link to="/productos" className="hover:text-brand-red transition-all">TIANLAI</Link></li>
-                <li><Link to="/productos" className="hover:text-brand-red transition-all">MEGALUZ CONCERT</Link></li>
-                <li><Link to="/productos" className="hover:text-brand-red transition-all">GONEO</Link></li>
+                <li><Link to="/productos?marca=madrigalpro" className="hover:text-brand-red transition-all">MADRIGAL PRO</Link></li>
+                <li><Link to="/productos?marca=tianlai" className="hover:text-brand-red transition-all">TIANLAI</Link></li>
+                <li><Link to="/productos?marca=megaluz" className="hover:text-brand-red transition-all">MEGALUZ CONCERT</Link></li>
+                <li><Link to="/productos?marca=goneo" className="hover:text-brand-red transition-all">GONEO</Link></li>
               </ul>
             </div>
 
@@ -852,11 +852,19 @@ function HomeView() {
 function CatalogView() {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryParam = searchParams.get("categoria") || "all";
+  const brandParam = searchParams.get("marca");
 
-  const [activeBrand, setActiveBrand] = useState("madrigalpro");
+  const [activeBrand, setActiveBrand] = useState(brandParam || "madrigalpro");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(categoryParam);
   const navigate = useNavigate();
+
+  // Sync active brand with URL parameter when it changes
+  useEffect(() => {
+    if (brandParam) {
+      setActiveBrand(brandParam);
+    }
+  }, [brandParam]);
 
   // Keep selectedCategory in sync with URL parameter
   useEffect(() => {
