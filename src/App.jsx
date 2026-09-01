@@ -38,14 +38,14 @@ import {
 const BRAND_NAME = "LEDS Y BOCINAS MADRIGAL";
 const LEGAL_NAME = "LEDS Y BOCINAS MADRIGAL";
 const ADDRESS = "Av. Convento Santa Mónica, Edificio 79, Piso 2, Interior 30 1-A, Col. Jardines de Santa Mónica, C.P. 54050, Tlalnepantla de Baz, Estado de México, México";
-const SUPPORT_EMAIL = "soporte@ledsybocinasmadrigal.com.mx";
+const SUPPORT_EMAIL = "ledsybocinasmadrigal26@gmail.com";
 
 const SITE_DATA = {
   brandName: BRAND_NAME,
   legalName: LEGAL_NAME,
-  phone: "+52 55 1234 5678",
-  phoneFormatted: "+52 (55) 1234-5678",
-  email: "ventas@ledsybocinasmadrigal.com.mx",
+  phone: "(55) 90 65 01 22",
+  phoneFormatted: "(55) 90 65 01 22",
+  email: "ledsybocinasmadrigal26@gmail.com",
   supportEmail: SUPPORT_EMAIL,
   address: ADDRESS,
   googleMapsUrl: "https://maps.google.com/?q=Av.+Convento+Santa+Mónica,+Edificio+79,+Jardines+de+Santa+Mónica,+54050+Tlalnepantla+de+Baz",
@@ -1265,7 +1265,7 @@ function ContactView() {
         {/* Contact Info Cards */}
         <div>
           <h2 className="text-xl font-bold text-center text-slate-900 mb-6 uppercase tracking-wider">Información de contacto</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-3 gap-6">
             
             {/* Teléfono */}
             <div className="bg-white rounded-lg border border-slate-200 p-6 text-center space-y-3 shadow-sm flex flex-col items-center">
@@ -1273,7 +1273,7 @@ function ContactView() {
                 <Phone className="w-4 h-4" />
               </div>
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">Teléfono</span>
-              <a href={`tel:${SITE_DATA.phone}`} className="text-sm font-bold text-slate-800 hover:text-brand-red transition-all">
+              <a href="tel:+525590650122" className="text-sm font-bold text-slate-800 hover:text-brand-red transition-all">
                 {SITE_DATA.phone}
               </a>
             </div>
@@ -1298,22 +1298,6 @@ function ContactView() {
               <p className="text-xs font-bold text-slate-800 leading-normal">
                 {SITE_DATA.address}
               </p>
-            </div>
-
-            {/* Whatsapp */}
-            <div className="bg-white rounded-lg border border-slate-200 p-6 text-center space-y-3 shadow-sm flex flex-col items-center">
-              <div className="w-10 h-10 rounded-full bg-red-50 border border-red-100 flex items-center justify-center text-brand-red shrink-0 text-xs font-bold">
-                W
-              </div>
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">Whatsapp</span>
-              <a 
-                href={`https://wa.me/525574552441`} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-sm font-bold text-slate-800 hover:text-brand-red transition-all"
-              >
-                +525574552441
-              </a>
             </div>
           </div>
         </div>
