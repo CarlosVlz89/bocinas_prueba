@@ -5,8 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/bocinas_prueba/',
+  base: '/',
   build: {
-    outDir: 'docs'
+    outDir: 'dist'
   }
 })
