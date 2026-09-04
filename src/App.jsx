@@ -43,8 +43,8 @@ const SUPPORT_EMAIL = "ledsybocinasmadrigal26@gmail.com";
 const SITE_DATA = {
   brandName: BRAND_NAME,
   legalName: LEGAL_NAME,
-  phone: "(55) 90 65 01 22",
-  phoneFormatted: "(55) 90 65 01 22",
+  phone: "(55) 90 65 01 95",
+  phoneFormatted: "(55) 90 65 01 95",
   email: "ledsybocinasmadrigal26@gmail.com",
   supportEmail: SUPPORT_EMAIL,
   address: ADDRESS,
@@ -1273,7 +1273,7 @@ function ContactView() {
                 <Phone className="w-4 h-4" />
               </div>
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">Teléfono</span>
-              <a href="tel:+525590650122" className="text-sm font-bold text-slate-800 hover:text-brand-red transition-all">
+              <a href="tel:+525590650195" className="text-sm font-bold text-slate-800 hover:text-brand-red transition-all">
                 {SITE_DATA.phone}
               </a>
             </div>
